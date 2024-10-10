@@ -1,0 +1,14 @@
+
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY client.py .
+COPY key_generator.py .
+COPY cellphones_ratings.csv .
+COPY ratings.csv .
+COPY ratings_percent.csv .
+COPY single_svd_client_recommendation_system.py .
+
+
+CMD tail -f /dev/null

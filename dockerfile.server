@@ -1,0 +1,14 @@
+# Use an official Python 3.9 runtime as a parent image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+COPY server.py .
+
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
+
+
+# Run server.py when the container launches, then keep it open for interaction
+CMD tail -f /dev/null
